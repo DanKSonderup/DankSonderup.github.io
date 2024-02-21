@@ -1,4 +1,5 @@
 
+
 let currentPlayer = "X";
 
 let gameEnded = false;
@@ -29,6 +30,9 @@ cells.forEach(cell => {
 
 
 function cellClicked(event) {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.4;
+    audio.play();
     if (gameEnded) {
         return;
     }
